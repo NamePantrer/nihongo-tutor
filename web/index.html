@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>日本語学習アシスタント</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css?v=37" />
+  </head>
+  <body>
+    <div class="desk">
+      <aside class="rail" aria-label="Разделы">
+        <div class="mark-wrap">
+          <svg class="twig" viewBox="0 0 72 48" aria-hidden="true">
+            <path
+              d="M8 40 C22 36 28 22 40 18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+            />
+            <circle cx="26" cy="28" r="5" fill="currentColor" opacity="0.85" />
+            <circle cx="38" cy="16" r="4.2" fill="currentColor" opacity="0.7" />
+            <circle cx="44" cy="24" r="3.4" fill="currentColor" opacity="0.55" />
+            <circle cx="18" cy="34" r="3" fill="currentColor" opacity="0.5" />
+          </svg>
+          <p class="mark">桜</p>
+        </div>
+        <p class="brand">日本語学習アシスタント</p>
+        <p class="brand-sub">после занятия — форма вслух</p>
+        <button type="button" class="rail-more" id="rail-more" aria-expanded="false" aria-controls="rail-nav">
+          Ещё
+        </button>
+        <nav id="rail-nav">
+          <a href="#/" data-route="/" title="N5–N1. Если есть форма — сначала она">Темы</a>
+          <a href="#/zoom" data-route="/zoom" title="Звук 40+40+10">Zoom</a>
+          <a href="#/settings" data-route="/settings" title="Срез, текст, очередь">Настройки</a>
+        </nav>
+        <p class="rail-note" id="rail-stats"></p>
+      </aside>
+      <main class="stage" id="stage"></main>
+    </div>
+    <div id="veil" class="veil" hidden>
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1">
+        <div class="sheet-stamp" id="sheet-stamp" aria-hidden="true"></div>
+        <h2 id="sheet-title"></h2>
+        <div class="sheet-body" id="sheet-body"></div>
+        <div class="row" id="sheet-actions"></div>
+      </div>
+    </div>
+    <script src="/static/romaji.js?v=37"></script>
+    <script src="/static/sky.js?v=37"></script>
+    <script src="/static/strokes.js?v=37"></script>
+    <script src="/static/app.js?v=37"></script>
+  </body>
+</html>

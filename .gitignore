@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local learner state and frozen builds — not the GitHub copy
+/data/*
+!/data/.gitkeep
+/data-benran/
+/dist/
+/build/
+*.exe
+*.log
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+toast_log.jsonl
+.DS_Store
+Thumbs.db
+
+# JMdict dumps; packers download these if missing
+assets/JMdict.gz
+assets/jmdict-rus.json.zip
+assets/jmdict-rus*.json
+assets/kanjidic2.xml
+assets/kanjidic2.xml.gz
